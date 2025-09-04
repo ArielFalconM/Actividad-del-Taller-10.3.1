@@ -43,3 +43,11 @@ botonAgregar.addEventListener('click', () => {
         inputItem.value = ''; // Limpiar campo
     }
 });
+
+function limpiarLista() {
+guardarLista([]);
+mostrarLista();
+}
+
+botonLimpiar.addEventListener("click", limpiarLista);
+
