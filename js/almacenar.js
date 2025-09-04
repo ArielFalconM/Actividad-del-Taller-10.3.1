@@ -9,3 +9,8 @@ function obtenerLista() {
     const listaJSON = localStorage.getItem('listaItems');
     return listaJSON ? JSON.parse(listaJSON) : [];
 }
+
+// Función para guardar la lista en localStorage
+function guardarLista(lista) {
+    localStorage.setItem('listaItems', JSON.stringify(lista));
+}
