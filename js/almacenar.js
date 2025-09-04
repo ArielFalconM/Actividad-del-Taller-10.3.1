@@ -14,3 +14,16 @@ function obtenerLista() {
 function guardarLista(lista) {
     localStorage.setItem('listaItems', JSON.stringify(lista));
 }
+
+// Función para mostrar la lista en el HTML
+function mostrarLista() {
+    const lista = obtenerLista();
+    contenedor.innerHTML = ''; // Limpiar contenedor
+
+    lista.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.textContent = item;
+        contenedor.appendChild(li);
+    });
+}
