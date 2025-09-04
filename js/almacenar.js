@@ -45,8 +45,9 @@ botonAgregar.addEventListener('click', () => {
 });
 
 function limpiarLista() {
-    localStorage.removeItem("listaItems");
-    mostrarLista();
+guardarLista([]);
+mostrarLista();
 }
 
 botonLimpiar.addEventListener("click", limpiarLista);
+
