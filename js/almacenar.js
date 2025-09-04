@@ -30,3 +30,16 @@ function mostrarLista() {
 
 // Inicializar: mostrar la lista guardada al cargar la página
 mostrarLista();
+
+// Evento: Agregar un nuevo ítem
+botonAgregar.addEventListener('click', () => {
+    const valor = inputItem.value.trim();
+
+    if (valor !== '') {
+        const lista = obtenerLista();
+        lista.push(valor); // Añadir nuevo ítem
+        guardarLista(lista); // Guardar en localStorage
+        mostrarLista(); // Actualizar vista
+        inputItem.value = ''; // Limpiar campo
+    }
+});
