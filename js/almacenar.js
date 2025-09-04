@@ -27,3 +27,6 @@ function mostrarLista() {
         contenedor.appendChild(li);
     });
 }
+
+// Inicializar: mostrar la lista guardada al cargar la página
+mostrarLista();
